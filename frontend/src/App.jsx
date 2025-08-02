@@ -3,14 +3,18 @@ import './App.css'
 import HomePage from './pages/homePage'
 import AdminPage from './pages/adminPage'
 import TestPage from './pages/testPage'
+import LoginPage from './pages/loginpage'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
  
   return (
   <BrowserRouter>
     <div className='h-screen w-full flex justify-center items-center'>
+      <Toaster position='top-center'/>
         <Routes path="/">
           <Route path="/" element={<HomePage/>}></Route>
+          <Route path="/login" element={<LoginPage/>}></Route>
           <Route path="/admin/*" element={<AdminPage/>}></Route>
           <Route path="/test" element={<TestPage/>}></Route>
         </Routes>
