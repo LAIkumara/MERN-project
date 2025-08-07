@@ -28,7 +28,6 @@ export default function LoginPage(){
                 navigate("/user")
             }
 
-
         }).catch((error)=>{
             console.log(error)
             // alert("loging failed!")

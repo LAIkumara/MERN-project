@@ -13,7 +13,7 @@ export default function AddProduct() {
     const [image, setImage] = useState([])
     const [description, setDescription] = useState("");
     const [stock, setStock] = useState(0);
-    const [isAvailable, setIsAvailable] = useState(true);
+    const [isAvailble, setisAvailble] = useState(true);
     const [category, setCategory] = useState("cosmetics");
     const navigate = useNavigate();
 
@@ -41,7 +41,7 @@ export default function AddProduct() {
             image: responses,
             description: description,
             stock: stock,
-            isAvailable: isAvailable,
+            isAvailble: isAvailble,
             category: category
         };
         console.log("Product Data:", productData);
@@ -152,8 +152,8 @@ export default function AddProduct() {
                 <div className="flex flex-col gap-2">
                     <label className="text-xl">Is Available</label>
                     <select
-                        value={isAvailable}
-                        onChange={(e) => { setIsAvailable(e.target.value); }}
+                        value={isAvailble}
+                        onChange={(e) => { setisAvailble(e.target.value); }}
                         className="w-[300px] h-[40px] text-xl border-2 pl-1 border-black rounded-lg"
                     >
                         <option value="true">Available</option>

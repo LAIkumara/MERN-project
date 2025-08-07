@@ -12,9 +12,9 @@ export default function UpdateProduct() {
     const [labelledPrice, setLabelledPrice] = useState(location.state.labelledPrice);
     const [price, setPrice] = useState(location.state.price);
     const [image, setImage] = useState([])
-    const [description, setDescription] = useState(location);
+    const [description, setDescription] = useState(location.state.description);
     const [stock, setStock] = useState(location.state.stock);
-    const [isAvailable, setIsAvailable] = useState(location.state.isAvailable);
+    const [isAvailble, setIsAvailable] = useState(location.state.isAvailble);
     const [category, setCategory] = useState(location.state.category);
     const navigate = useNavigate();
 
@@ -44,7 +44,7 @@ export default function UpdateProduct() {
             image: responses,
             description: description,
             stock: stock,
-            isAvailable: isAvailable,
+            isAvailble: isAvailble,
             category: category
         };
         
@@ -159,7 +159,7 @@ export default function UpdateProduct() {
                 <div className="flex flex-col gap-2">
                     <label className="text-xl">Is Available</label>
                     <select
-                        value={isAvailable}
+                        value={isAvailble}
                         onChange={(e) => { setIsAvailable(e.target.value); }}
                         className="w-[300px] h-[40px] text-xl border-2 pl-1 border-black rounded-lg"
                     >

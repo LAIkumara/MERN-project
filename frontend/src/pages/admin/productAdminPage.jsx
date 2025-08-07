@@ -23,7 +23,7 @@ export default function ProductAdminPage(){
 
     return(
         <div className=" w-full h-full border-2">
-            <div className="w-full h-full border-[3px]">
+            <div className="w-full h-full border-[3px] flex flex-col items-center">
                 {isLoading ? (
                     <Loader />
                 ) : (<table>
@@ -58,7 +58,9 @@ export default function ProductAdminPage(){
                                         <td className="p-2">{product.price}</td>
                                         <td className="p-2">{product.description}</td>
                                         <td className="p-2">{product.stock}</td>
-                                        <td className="p-2">{product.isAvailable ? "No" : "Yes"}</td>
+                                        <td className="p-2">{product.isAvailble === true ? "Yes" : product.isAvailble === false ? "No" : ""}</td>
+
+                                        
                                         <td className="p-2 flex justify-center items-center gap-2">
                                             <BiTrash className='text-2xl cursor-pointer text-red-600' onClick={() => {
                                                 const token = localStorage.getItem("token");
@@ -102,8 +104,7 @@ export default function ProductAdminPage(){
             <Link to={"/admin/newProduct"} className=' fixed bottom-[50px] right-[50px]'>
                 < BiPlus className=' bg-blue-600 text-7xl rounded-full text-white p-4'/>
             </Link>
-            <div className="flex justify-center items-center h-[100px]">
-                <h1 className="text-3xl font-bold">Product Management</h1></div>
+            
             
         </div>
     )
