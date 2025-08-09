@@ -5,8 +5,8 @@ import { Link, useNavigate } from "react-router-dom"
 
 export default function LoginPage(){
 
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
     const navigate = useNavigate()
 
     function login(){
@@ -21,7 +21,7 @@ export default function LoginPage(){
             toast.success("loging successfull!")
 
             if(response.data.role=="admin"){
-                navigate("/admin")
+                navigate("/admin/dashbord")
             }
 
             else if(response.data.role == "user"){
@@ -60,6 +60,7 @@ export default function LoginPage(){
                     </div>
                 </div>
                 <button onClick={login} className=" w-[350px] h-[40px] bg-blue-600 rounded-2xl mt-[40px] text-white">Submit</button>
+                <p>Don't have an account? <Link to="/register" className="text-blue-500">Sign up</Link> from here</p>
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ import jwt, { decode } from "jsonwebtoken"
 import productRouter from "./routers/productRouter.js"
 import dotenv from "dotenv"
 import cors from "cors"
+import orderRouter from "./routers/orderRouter.js"
 
 dotenv.config()
 
@@ -48,6 +49,7 @@ mongoose.connect(connectionString).then(()=>{
 
 app.use("/users", userRouter)
 app.use("/products", productRouter)
+app.use("/orders", orderRouter)
 app.listen(3000, ()=>{
     console.log("Server is running on port 3000")
 })
