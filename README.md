@@ -19,11 +19,9 @@ A comprehensive full-stack web application showcasing modern web development pra
 
 ### ✨ **Key Highlights**
 - 🔐 **Secure Authentication System** with JWT tokens
-- 📱 **Responsive Design** optimized for all devices
 - 🛠️ **Full CRUD Operations** for comprehensive data management
 - 👨‍💼 **Admin Dashboard** for user and content management
 - 🚀 **RESTful API** architecture for scalable backend services
-- 🎨 **Modern UI/UX** with Material-UI components
 
 ---
 
@@ -33,7 +31,6 @@ A comprehensive full-stack web application showcasing modern web development pra
 
 ### **Frontend**
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 ![Axios](https://img.shields.io/badge/Axios-671ddf?style=for-the-badge&logo=axios&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
@@ -64,11 +61,6 @@ const projectFeatures = {
         read: "Fetch and display data efficiently",
         update: "Modify existing information",
         delete: "Remove unwanted data safely"
-    },
-    userExperience: {
-        responsive: "Mobile-first responsive design",
-        intuitive: "User-friendly interface",
-        fast: "Optimized performance"
     },
     administration: {
         dashboard: "Comprehensive admin panel",
@@ -151,17 +143,15 @@ Make sure you have the following installed on your system:
 MERN-project/
 ├── 📁 backend/
 │   ├── 📁 controllers/        # Business logic
-│   ├── 📁 middleware/         # Custom middleware
 │   ├── 📁 models/            # Database schemas
 │   ├── 📁 routes/            # API routes
 │   ├── 📁 config/            # Configuration files
-│   └── 📄 server.js          # Entry point
+│   └── 📄 index.js          # Entry point
 ├── 📁 frontend/
 │   ├── 📁 public/            # Static assets
 │   ├── 📁 src/
 │   │   ├── 📁 components/    # React components
 │   │   ├── 📁 pages/         # Page components
-│   │   ├── 📁 services/      # API services
 │   │   ├── 📁 utils/         # Utility functions
 │   │   └── 📄 App.js         # Main App component
 │   └── 📄 package.json       # Dependencies
@@ -174,41 +164,26 @@ MERN-project/
 
 ### **Authentication**
 ```http
-POST   /api/auth/register      # User registration
-POST   /api/auth/login         # User login
-GET    /api/auth/profile       # Get user profile
-PUT    /api/auth/profile       # Update user profile
+POST   /login         # User login
+GET    /profile       # Get user profile
 ```
 
 ### **User Management**
 ```http
-GET    /api/users              # Get all users (Admin)
-GET    /api/users/:id          # Get specific user
-PUT    /api/users/:id          # Update user
-DELETE /api/users/:id          # Delete user
+GET    /users              # Get all users (Admin)
+GET    /users/:id          # Get specific user
+PUT    /users/:id          # Update user
+DELETE users/:id          # Delete user
 ```
 
 ### **Data Operations**
 ```http
-GET    /api/data               # Fetch all data
-POST   /api/data               # Create new data
-PUT    /api/data/:id           # Update specific data
-DELETE /api/data/:id           # Delete specific data
+GET    /data               # Fetch all data
+POST   /data               # Create new data
+PUT    /data/:id           # Update specific data
+DELETE /data/:id           # Delete specific data
 ```
 
----
-
-## 🎨 **Screenshots**
-
-<div align="center">
-
-### **Dashboard View**
-*Coming Soon - Add your application screenshots here*
-
-### **Mobile Responsive**
-*Coming Soon - Add mobile view screenshots here*
-
-</div>
 
 ---
 
@@ -233,46 +208,12 @@ We welcome contributions! Here's how you can help:
 
 ---
 
-## 📋 **Todo List**
-
-- [ ] Add unit tests
-- [ ] Implement email verification
-- [ ] Add password reset functionality
-- [ ] Integrate payment gateway
-- [ ] Add real-time notifications
-- [ ] Implement data export features
-- [ ] Add Docker containerization
-- [ ] Set up CI/CD pipeline
-
----
-
-## 🐛 **Known Issues**
-
-- None at the moment! 🎉
-
----
-
-## 📄 **License**
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 👨‍💻 **Author**
 
 **Akila Liyanage**
 - Portfolio: [https://akila-liyanage.vercel.app/](https://akila-liyanage.vercel.app/)
 - LinkedIn: [Akila Liyanage](https://linkedin.com/in/akila-liyanage)
 - Email: [akilaimalsha@gmail.com](mailto:akilaimalsha@gmail.com)
-
----
-
-## 🙏 **Acknowledgments**
-
-- Thanks to the MERN stack community for excellent documentation
-- Material-UI team for beautiful components
-- MongoDB team for the robust database solution
-- All contributors who helped improve this project
 
 ---
 
