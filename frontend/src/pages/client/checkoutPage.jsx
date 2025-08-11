@@ -22,7 +22,7 @@ export default function CheckoutPage() {
 			return;
 		} else {
 			axios
-				.get(import.meta.env.VITE_BACKEND_URL + "/api/users", {
+				.get(import.meta.env.VITE_BACKEND_URI + "/users", {
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},

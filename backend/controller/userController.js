@@ -27,17 +27,17 @@ export function createUser(req, res){
     })
 }
 
-export function getUsers(req, res){
-    User.find().then((users)=>{
-        res.json(users)
+// export function getUsers(req, res){
+//     User.find().then((users)=>{
+//         res.json(users)
             
-        console.log("Successfully fetch users")
-    }).catch(()=>{
-        res.json({
-            message: "Failed to fetch users"
-        })
-    })
-}
+//         console.log("Successfully fetch users")
+//     }).catch(()=>{
+//         res.json({
+//             message: "Failed to fetch users"
+//         })
+//     })
+// }
 
 export function loginUser(req,res){
     const email = req.body.email
@@ -78,6 +78,17 @@ export function loginUser(req,res){
             
         } 
     })
+}
+
+export function getUser(req,res){
+    if(req.user == null){
+        res.status(404).json({
+            message : "User not found"
+        })
+    }else{
+        console.log(req.user)
+        res.json(req.user)
+    }
 }
 
 export function isAdmin(req){
