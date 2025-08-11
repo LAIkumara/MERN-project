@@ -173,7 +173,7 @@ GET    /profile       # Get user profile
 GET    /users              # Get all users (Admin)
 GET    /users/:id          # Get specific user
 PUT    /users/:id          # Update user
-DELETE users/:id          # Delete user
+DELETE /users/:id          # Delete user
 ```
 
 ### **Data Operations**
